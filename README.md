@@ -1,4 +1,4 @@
-# AI Resume Screener — Internship Project
+# AI Resume Screener — Project
 
 A full-stack AI-powered resume screening tool built with Python (Flask), NLP (spaCy + scikit-learn), and a clean HTML/CSS/JS frontend.
 
@@ -75,7 +75,7 @@ Open your browser and go to: http://127.0.0.1:5000
 
 ---
 
-## How It Works (for your internship report)
+## How It Works (for your resume report)
 
 ### 1. PDF Upload & Text Extraction
 - User uploads one or more PDF resumes via the web form
