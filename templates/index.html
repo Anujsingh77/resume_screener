@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Resume Screener</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Resume Screener</h1>
+      <p>Upload candidate PDFs and a job description. Claude-powered NLP ranks them instantly.</p>
+    </header>
+
+    <form id="screenForm" enctype="multipart/form-data">
+      <div class="card">
+        <label class="section-label">Job Description</label>
+        <textarea id="jd" name="job_description" rows="7"
+          placeholder="Paste the full job description here — responsibilities, required skills, qualifications…"></textarea>
+      </div>
+
+      <div class="card">
+        <label class="section-label">Upload Resumes (PDF)</label>
+        <div class="file-drop" id="fileDrop">
+          <input type="file" name="resumes" id="fileInput" multiple accept=".pdf" />
+          <span>Click or drag PDF files here</span>
+        </div>
+        <div id="fileList" class="file-list"></div>
+      </div>
+
+      <button type="submit" id="submitBtn" class="btn-primary">
+        Screen Candidates
+      </button>
+    </form>
+
+    <div id="error" class="error-box" style="display:none"></div>
+    <div id="results"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
